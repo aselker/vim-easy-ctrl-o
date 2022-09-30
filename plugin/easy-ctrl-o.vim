@@ -74,17 +74,7 @@ function! <SID>EasyCtrlOMap(char)
 
     let s:current_chars = copy(g:easy_ctrl_o_chars)
 
-    " Workaround for #3, might be less annoying but still not perfect
-    let current_line = getline(".")
-    let current_line_trimed  = substitute(current_line, '^\s*\(.\{-}\)\s*$', '\1', '')
-    let n_chars = eval(join(values(g:easy_ctrl_o_chars), "+")) - 1
-
-    let seq = s:escape_sequence
-    if col(".") == len(current_line) + 1 && n_chars == len(current_line_trimed)
-        let seq = seq . '0"_D'
-    endif
-
-    return seq
+    return s:escape_sequence
 
 endfunction
 

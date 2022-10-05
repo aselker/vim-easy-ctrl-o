@@ -10,7 +10,7 @@ let g:loaded_easy_ctrl_o = 1
 let s:haspy3 = has("python3")
 
 if !exists("g:easy_ctrl_o_chars")
-    let g:easy_ctrl_o_chars = { "d": 1, "f": 1 }
+    let g:easy_ctrl_o_chars = { "c": 1, "v": 1 }
 endif
 if !exists("g:easy_ctrl_o_timeout")
     if s:haspy3
